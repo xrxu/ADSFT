@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "dataset-record.schema.json",
+  "title": "WAB Dataset Record (ShareGPT)",
+  "description": "训练/测试 jsonl 中的一行。messages 为 ShareGPT 格式 (system/user/assistant)。",
+  "type": "object",
+  "required": ["messages", "case_id", "split", "source", "qtype", "info_gold", "flue_gold"],
+  "additionalProperties": false,
+  "properties": {
+    "messages": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["role", "content"],
+        "properties": {
+          "role": { "type": "string", "enum": ["system", "user", "assistant"] },
+          "content": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "case_id": { "type": "string" },
+    "split": { "type": "string", "enum": ["train", "test"] },
+    "source": { "type": "string", "enum": ["real", "fake"] },
+    "qtype": { "type": "string", "enum": ["score", "reason"] },
+    "info_gold": { "type": "integer", "minimum": 0, "maximum": 10 },
+    "flue_gold": { "type": "integer", "minimum": 0, "maximum": 10 }
+  },
+  "$comment": "usage=无效 的 Case 不得生成任何记录。qtype=score 的 assistant.content 必须可被解析器还原为 (info_gold, flue_gold)。"
+}

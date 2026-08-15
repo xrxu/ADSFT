@@ -1,0 +1,257 @@
+KEEP P001: split=test source=real (score only)
+DROP P002: 用途='无效'（排除）
+DROP P003: 用途='无效'（排除）
+KEEP P004: split=train source=real (score only)
+KEEP P005: split=train source=real (score only)
+KEEP P006: split=train source=real (score only)
+KEEP P007: split=train source=real (score only)
+KEEP P008: split=train source=real (score only)
+KEEP P009: split=train source=real (score only)
+KEEP P010: split=train source=real (score only)
+KEEP P011: split=train source=real (score only)
+KEEP P012: split=train source=real (score only)
+KEEP P013: split=test source=real (score only)
+DROP P014: 用途='无效'（排除）
+KEEP P015: split=test source=real (score only)
+KEEP P016: split=train source=real (score only)
+KEEP P017: split=train source=real (score only)
+KEEP P018: split=train source=real (score only)
+KEEP P019: split=test source=real (score only)
+KEEP P020: split=train source=real (score only)
+KEEP P021: split=train source=real (score only)
+KEEP P028: split=train source=real (score only)
+KEEP P046: split=train source=real (score only)
+KEEP P047: split=train source=real (score only)
+KEEP P048: split=train source=real (score only)
+KEEP P049: split=train source=real (score only)
+KEEP P050: split=train source=real (score only)
+KEEP P051: split=train source=real (score only)
+KEEP P060: split=train source=real (score only)
+KEEP P061: split=train source=real (score only)
+KEEP P062: split=train source=real (score only)
+KEEP P063: split=train source=real (score only)
+KEEP P064: split=train source=real (score only)
+KEEP P065: split=train source=real (score only)
+KEEP P066: split=train source=real (score only)
+KEEP P067: split=train source=real (score only)
+KEEP P068: split=train source=real (score only)
+KEEP P069: split=train source=real (score only)
+DROP P070: 用途='无效'（排除）
+DROP P071: 用途='无效'（排除）
+KEEP P072: split=train source=real (score only)
+KEEP P073: split=train source=real (score only)
+KEEP P074: split=train source=real (score only)
+DROP P075: 用途='无效'（排除）
+KEEP P076: split=train source=real (score only)
+KEEP P077: split=test source=real (score only)
+KEEP P078: split=test source=real (score only)
+KEEP P081: split=train source=real (score only)
+KEEP P082: split=train source=real (score only)
+KEEP P083: split=train source=real (score only)
+KEEP P084: split=train source=real (score only)
+KEEP P085: split=train source=real (score only)
+KEEP P086: split=train source=real (score only)
+DROP P087: 用途='无效'（排除）
+DROP P088: 用途='无效'（排除）
+KEEP P089: split=train source=real (score only)
+KEEP P090: split=train source=real (score only)
+DROP P091: 用途='无效'（排除）
+KEEP P092: split=train source=real (score only)
+KEEP P093: split=test source=real (score only)
+KEEP P094: split=train source=real (score only)
+KEEP P095: split=train source=real (score only)
+KEEP P096: split=train source=real (score only)
+KEEP P097: split=train source=real (score only)
+KEEP P098: split=train source=real (score only)
+KEEP P099: split=train source=real (score only)
+DROP P100: 用途='无效'（排除）
+KEEP P101: split=test source=real (score only)
+KEEP P102: split=train source=real (score only)
+KEEP P103: split=train source=real (score only)
+KEEP P104: split=train source=real (score only)
+KEEP P105: split=train source=real (score only)
+KEEP P106: split=train source=real (score only)
+KEEP P107: split=train source=real (score only)
+KEEP P108: split=train source=real (score only)
+KEEP P109: split=train source=real (score only)
+KEEP P110: split=train source=real (score only)
+KEEP P111: split=train source=real (score only)
+KEEP P112: split=train source=real (score only)
+KEEP P113: split=train source=real (score only)
+KEEP P114: split=train source=real (score only)
+KEEP P115: split=train source=real (score only)
+KEEP P116: split=train source=real (score only)
+DROP P117: 用途='无效'（排除）
+KEEP P118: split=train source=real (score only)
+KEEP P119: split=test source=real (score only)
+KEEP P120: split=train source=real (score only)
+KEEP P121: split=train source=real (score only)
+KEEP P122: split=train source=real (score only)
+KEEP P123: split=train source=real (score only)
+KEEP P124: split=test source=real (score only)
+KEEP P125: split=train source=real (score only)
+KEEP P126: split=test source=real (score only)
+KEEP P127: split=train source=real (score only)
+KEEP P128: split=train source=real (score only)
+KEEP P129: split=train source=real (score only)
+KEEP P130: split=train source=real (score only)
+KEEP P131: split=test source=real (score only)
+KEEP P132: split=train source=real (score only)
+KEEP P133: split=train source=real (score only)
+KEEP P134: split=train source=real (score only)
+KEEP P135: split=test source=real (score only)
+KEEP P136: split=train source=real (score only)
+KEEP P137: split=train source=real (score only)
+KEEP P138: split=train source=real (score only)
+KEEP P139: split=test source=real (score only)
+KEEP P140: split=train source=real (score only)
+KEEP P141: split=train source=real (score only)
+KEEP P142: split=train source=real (score only)
+DROP P143: 用途='无效'（排除）
+KEEP P144: split=train source=real (score only)
+KEEP P145: split=train source=real (score only)
+KEEP P146: split=train source=real (score only)
+KEEP P147: split=test source=real (score only)
+KEEP P148: split=train source=real (score only)
+KEEP P149: split=train source=real (score only)
+KEEP P150: split=train source=real (score only)
+KEEP P151: split=train source=real (score only)
+KEEP P152: split=test source=real (score only)
+KEEP P153: split=train source=real (score only)
+KEEP P154: split=test source=real (score only)
+KEEP P155: split=test source=real (score only)
+KEEP P156: split=test source=real (score only)
+KEEP P157: split=test source=real (score only)
+KEEP P158: split=test source=real (score only)
+KEEP P159: split=test source=real (score only)
+KEEP P160: split=test source=real (score only)
+KEEP P161: split=test source=real (score only)
+KEEP P162: split=train source=real (score only)
+KEEP P163: split=test source=real (score only)
+KEEP P164: split=test source=real (score only)
+KEEP P165: split=train source=real (score only)
+KEEP P166: split=train source=real (score only)
+KEEP P167: split=train source=real (score only)
+DROP P168: 用途='无效'（排除）
+KEEP P169: split=train source=real (score only)
+KEEP P170: split=train source=real (score only)
+KEEP P171: split=train source=real (score only)
+KEEP P172: split=train source=real (score only)
+KEEP P173: split=train source=real (score only)
+KEEP P174: split=train source=real (score only)
+KEEP P175: split=train source=real (score only)
+KEEP P176: split=train source=real (score only)
+DROP P177: 用途='无效'（排除）
+KEEP P178: split=train source=real (score only)
+KEEP P179: split=train source=real (score only)
+KEEP P180: split=train source=real (score only)
+KEEP P181: split=train source=real (score only)
+KEEP P182: split=train source=real (score only)
+KEEP P183: split=train source=real (score only)
+KEEP P184: split=train source=real (score only)
+KEEP P185: split=train source=real (score only)
+KEEP P186: split=train source=real (score only)
+KEEP P187: split=train source=real (score only)
+KEEP P188: split=train source=real (score only)
+KEEP P189: split=train source=real (score only)
+KEEP P190: split=train source=real (score only)
+KEEP P191: split=train source=real (score only)
+KEEP P192: split=train source=real (score only)
+KEEP P193: split=train source=real (score only)
+KEEP P194: split=train source=real (score only)
+KEEP P195: split=train source=real (score only)
+KEEP P196: split=train source=real (score only)
+KEEP P197: split=train source=real (score only)
+DROP P198: 用途='无效'（排除）
+KEEP P199: split=train source=real (score only)
+KEEP P200: split=train source=real (score only)
+KEEP P201: split=train source=real (score only)
+KEEP P202: split=train source=real (score only)
+KEEP P203: split=train source=real (score only)
+KEEP P204: split=train source=real (score only)
+KEEP P205: split=train source=real (score only)
+KEEP P206: split=train source=real (score only)
+KEEP P207: split=train source=real (score only)
+DROP P208: 用途='无效'（排除）
+KEEP P209: split=train source=real (score only)
+KEEP P210: split=train source=real (score only)
+KEEP P211: split=train source=real (score only)
+DROP P212: 用途='无效'（排除）
+KEEP P213: split=train source=real (score only)
+KEEP P214: split=train source=real (score only)
+KEEP P215: split=train source=real (score only)
+KEEP P216: split=train source=real (score only)
+KEEP P217: split=train source=real (score only)
+KEEP P218: split=train source=real (score only)
+KEEP P219: split=train source=real (score only)
+KEEP P220: split=train source=real (score only)
+DROP FA_11: 缺信息量/流畅度金标准
+DROP FA_21: 缺信息量/流畅度金标准
+DROP FA_22: 缺信息量/流畅度金标准
+DROP FA_31: 缺信息量/流畅度金标准
+DROP FA_32: 缺信息量/流畅度金标准
+DROP FA_33: 缺信息量/流畅度金标准
+DROP FA_34: 缺信息量/流畅度金标准
+DROP FA_41: 缺信息量/流畅度金标准
+DROP FA_42: 缺信息量/流畅度金标准
+DROP FA_43: 缺信息量/流畅度金标准
+DROP FA_44: 缺信息量/流畅度金标准
+DROP FA_52: 缺信息量/流畅度金标准
+DROP FA_53: 缺信息量/流畅度金标准
+DROP FA_54: 缺信息量/流畅度金标准
+DROP FA_62: 缺信息量/流畅度金标准
+DROP FA_63: 缺信息量/流畅度金标准
+DROP FA_64: 缺信息量/流畅度金标准
+DROP FA_74: 缺信息量/流畅度金标准
+DROP FA_75: 缺信息量/流畅度金标准
+DROP FA_76: 缺信息量/流畅度金标准
+DROP FA_77: 缺信息量/流畅度金标准
+DROP FA_78: 缺信息量/流畅度金标准
+DROP FA_79: 缺信息量/流畅度金标准
+DROP FA_84: 缺信息量/流畅度金标准
+DROP FA_85: 缺信息量/流畅度金标准
+DROP FA_86: 缺信息量/流畅度金标准
+DROP FA_87: 缺信息量/流畅度金标准
+DROP FA_88: 缺信息量/流畅度金标准
+DROP FA_89: 缺信息量/流畅度金标准
+DROP FA_94: 缺信息量/流畅度金标准
+DROP FA_95: 缺信息量/流畅度金标准
+DROP FA_96: 缺信息量/流畅度金标准
+DROP FA_97: 缺信息量/流畅度金标准
+DROP FA_98: 缺信息量/流畅度金标准
+DROP FA_99: 缺信息量/流畅度金标准
+KEEP FA000: split=train source=fake
+KEEP FA001: split=train source=fake
+KEEP FA002: split=train source=fake
+KEEP FA003: split=train source=fake
+KEEP FA004: split=train source=fake
+KEEP FA005: split=train source=fake
+KEEP FA006: split=train source=fake
+KEEP FA007: split=train source=fake
+KEEP FA008: split=train source=fake
+KEEP FA009: split=train source=fake
+KEEP FA010: split=train source=fake
+KEEP FA011: split=train source=fake
+KEEP FA012: split=train source=fake
+KEEP FA013: split=train source=fake
+KEEP FA014: split=train source=fake
+KEEP FA015: split=train source=fake
+KEEP FA016: split=train source=fake
+KEEP FA017: split=train source=fake
+KEEP FA018: split=train source=fake
+KEEP FA019: split=train source=fake
+KEEP FA020: split=train source=fake
+KEEP FA021: split=train source=fake
+KEEP FA022: split=train source=fake
+KEEP FA023: split=train source=fake
+KEEP FA024: split=train source=fake
+KEEP FA025: split=train source=fake
+KEEP FA026: split=train source=fake
+KEEP FA027: split=train source=fake
+KEEP FA028: split=train source=fake
+KEEP FA029: split=train source=fake
+KEEP FA030: split=train source=fake
+KEEP FA031: split=train source=fake
+KEEP FA032: split=train source=fake
+KEEP FA033: split=train source=fake
+KEEP FA034: split=train source=fake

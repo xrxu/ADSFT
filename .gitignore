@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+.pytest_cache/
+
+# Universal
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.vscode/
+.idea/
+
+# 流水线产物：adapters 不入库（模型权重大），其余可追踪
+artifacts/adapters/
+*.log
+
+# 密钥 / 环境（绝不入库）
+.env
+.env.*
+
+# 模型权重 / 适配器
+*.safetensors
+*.bin
+
+# 保留：最终 HTML 报告应可入库（check-in 到工作目录）
+!report/
+!report/*.html

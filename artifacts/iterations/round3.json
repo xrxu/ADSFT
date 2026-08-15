@@ -1,0 +1,14 @@
+{
+  "round": 3,
+  "lf_config_path": "/proj/arch/users/xinxu/med/aphasiacld/configs/round3.yaml",
+  "hyperparams": {
+    "lora_rank": 32,
+    "lr": 0.0001,
+    "grad_accum": 8,
+    "cutoff_len": 8192
+  },
+  "dataset_version": "v0.80",
+  "seed": 20260531,
+  "adapter_path": "/proj/arch/users/xinxu/med/aphasiacld/artifacts/adapters/round3",
+  "swanlab_run": "round3-rank32-lr0.0001"
+}

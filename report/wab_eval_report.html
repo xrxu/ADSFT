@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh"><head><meta charset="utf-8">
+<title>WAB 失语症评分评估报告</title>
+<style>
+body{font-family:system-ui,'Microsoft YaHei',sans-serif;margin:24px;color:#222}
+h1{font-size:20px} h2{font-size:16px;margin-top:28px}
+table{border-collapse:collapse;margin-top:8px;font-size:13px}
+th,td{border:1px solid #ccc;padding:4px 8px;text-align:center}
+th{background:#f2f2f2}
+.miss{color:#999;font-style:italic} .fail{color:#c00;font-weight:bold}
+caption{text-align:left;font-weight:bold;margin-bottom:4px}
+</style></head><body>
+<h1>WAB 失语症评分评估报告</h1>
+<p>测试集总病例数：24 ｜ 共同有效病例数（所有路均 parse_ok）：<b>24</b> ｜ 数据集版本：v0.80 ｜ 分数为 信息量/流畅度（0–10）</p>
+
+
+<h2>1. 汇总对比（所有轮次 + baseline）</h2>
+<table>
+<tr><th>模型</th>
+<th>信息量<br>Spearman</th><th>信息量<br>ICC</th><th>信息量<br>QWK</th><th>信息量<br>MAE</th><th>信息量<br>完全一致</th>
+<th>流畅度<br>Spearman</th><th>流畅度<br>ICC</th><th>流畅度<br>QWK</th><th>流畅度<br>MAE</th><th>流畅度<br>完全一致</th>
+<th>解析成功率</th></tr>
+<tr><td>baseline(未微调)</td><td style='font-weight:bold'>0.738</td><td>0.756</td><td>0.756</td><td>1.542</td><td>0.250</td><td style='font-weight:bold'>0.659</td><td>0.645</td><td>0.563</td><td>2.208</td><td>0.125</td><td>1.000</td></tr><tr><td>微调 Round 1</td><td style='font-weight:bold'>0.890</td><td>0.840</td><td>0.804</td><td>1.583</td><td>0.167</td><td style='font-weight:bold'>0.758</td><td>0.800</td><td>0.800</td><td>1.292</td><td>0.375</td><td>1.000</td></tr><tr><td>微调 Round 2</td><td style='font-weight:bold'>0.902</td><td>0.879</td><td>0.871</td><td>1.000</td><td>0.500</td><td style='font-weight:bold'>0.785</td><td>0.792</td><td>0.792</td><td>1.458</td><td>0.292</td><td>1.000</td></tr><tr><td>微调 Round 3</td><td style='font-weight:bold'>0.906</td><td>0.879</td><td>0.873</td><td>1.083</td><td>0.417</td><td style='font-weight:bold'>0.798</td><td>0.831</td><td>0.831</td><td>1.125</td><td>0.375</td><td>1.000</td></tr><tr><td>微调 Round 4</td><td style='font-weight:bold'>0.912</td><td>0.879</td><td>0.861</td><td>1.125</td><td>0.458</td><td style='font-weight:bold'>0.831</td><td>0.828</td><td>0.822</td><td>1.250</td><td>0.417</td><td>1.000</td></tr><tr><td>微调 Round 5</td><td style='font-weight:bold'>0.933</td><td>0.899</td><td>0.880</td><td>1.125</td><td>0.375</td><td style='font-weight:bold'>0.864</td><td>0.861</td><td>0.839</td><td>1.250</td><td>0.417</td><td>1.000</td></tr><tr><td>deepseek-v4-pro</td><td style='font-weight:bold'>0.830</td><td>0.838</td><td>0.826</td><td>1.333</td><td>0.250</td><td style='font-weight:bold'>0.780</td><td>0.701</td><td>0.650</td><td>1.625</td><td>0.333</td><td>1.000</td></tr><tr><td>GLM 5.1</td><td style='font-weight:bold'>0.829</td><td>0.833</td><td>0.831</td><td>1.208</td><td>0.417</td><td style='font-weight:bold'>0.837</td><td>0.784</td><td>0.758</td><td>1.542</td><td>0.125</td><td>1.000</td></tr>
+</table>
+
+<h2>2. 逐病例评分（全部模型 vs 金标准）</h2>
+<table><caption>每病例：金标准 与 各路预测（信息量/流畅度）</caption>
+<tr><th>病例</th><th>金标准<br>信息/流畅</th><th>baseline(未微调)<br>信息/流畅</th><th>微调 Round 1<br>信息/流畅</th><th>微调 Round 2<br>信息/流畅</th><th>微调 Round 3<br>信息/流畅</th><th>微调 Round 4<br>信息/流畅</th><th>微调 Round 5<br>信息/流畅</th><th>deepseek-v4-pro<br>信息/流畅</th><th>GLM 5.1<br>信息/流畅</th></tr>
+<tr><td>P001</td><td><b>5/5</b></td><td>6/6</td><td>8/6</td><td>8/6</td><td>8/6</td><td>8/6</td><td>8/8</td><td>7/4</td><td>7/8</td></tr><tr><td>P013</td><td><b>10/10</b></td><td>6/8</td><td>9/9</td><td>10/10</td><td>10/10</td><td>10/10</td><td>10/10</td><td>9/10</td><td>10/9</td></tr><tr><td>P015</td><td><b>10/10</b></td><td>8/4</td><td>9/9</td><td>10/10</td><td>9/9</td><td>10/10</td><td>10/10</td><td>9/5</td><td>8/8</td></tr><tr><td>P019</td><td><b>0/0</b></td><td>0/0</td><td>0/0</td><td>0/0</td><td>0/0</td><td>0/0</td><td>1/1</td><td>0/1</td><td>0/1</td></tr><tr><td>P077</td><td><b>3/2</b></td><td>2/2</td><td>2/2</td><td>2/1</td><td>2/2</td><td>2/1</td><td>2/2</td><td>3/2</td><td>3/1</td></tr><tr><td>P078</td><td><b>2/1</b></td><td>3/2</td><td>3/2</td><td>2/2</td><td>2/2</td><td>2/2</td><td>2/2</td><td>3/4</td><td>3/2</td></tr><tr><td>P093</td><td><b>9/9</b></td><td>6/5</td><td>9/8</td><td>9/9</td><td>8/8</td><td>9/9</td><td>9/9</td><td>5/5</td><td>5/5</td></tr><tr><td>P101</td><td><b>0/0</b></td><td>0/0</td><td>0/0</td><td>0/0</td><td>0/0</td><td>0/0</td><td>0/0</td><td>0/3</td><td>0/3</td></tr><tr><td>P124</td><td><b>8/9</b></td><td>9/5</td><td>9/9</td><td>9/9</td><td>8/8</td><td>8/9</td><td>8/9</td><td>8/5</td><td>8/5</td></tr><tr><td>P126</td><td><b>2/8</b></td><td>5/4</td><td>4/2</td><td>3/2</td><td>4/2</td><td>4/3</td><td>4/5</td><td>3/7</td><td>4/7</td></tr><tr><td>P135</td><td><b>6/4</b></td><td>3/2</td><td>4/2</td><td>3/2</td><td>3/2</td><td>4/3</td><td>4/4</td><td>5/4</td><td>3/4</td></tr><tr><td>P139</td><td><b>4/6</b></td><td>4/4</td><td>8/6</td><td>6/5</td><td>6/6</td><td>6/5</td><td>6/5</td><td>8/4</td><td>6/5</td></tr><tr><td>P147</td><td><b>4/5</b></td><td>8/8</td><td>6/5</td><td>4/4</td><td>6/5</td><td>6/5</td><td>6/5</td><td>6/4</td><td>6/2</td></tr><tr><td>P152</td><td><b>8/6</b></td><td>7/3</td><td>8/8</td><td>8/8</td><td>8/6</td><td>8/9</td><td>8/9</td><td>9/5</td><td>8/4</td></tr><tr><td>P154</td><td><b>4/5</b></td><td>4/4</td><td>5/5</td><td>4/4</td><td>4/5</td><td>4/5</td><td>4/5</td><td>6/4</td><td>6/4</td></tr><tr><td>P155</td><td><b>2/2</b></td><td>0/0</td><td>0/0</td><td>0/0</td><td>0/0</td><td>0/0</td><td>0/0</td><td>0/0</td><td>0/3</td></tr><tr><td>P156</td><td><b>4/5</b></td><td>6/8</td><td>8/8</td><td>8/9</td><td>6/6</td><td>8/9</td><td>6/8</td><td>6/5</td><td>4/5</td></tr><tr><td>P157</td><td><b>6/5</b></td><td>3/4</td><td>9/9</td><td>9/9</td><td>8/9</td><td>8/9</td><td>8/9</td><td>6/5</td><td>6/4</td></tr><tr><td>P158</td><td><b>8/8</b></td><td>8/6</td><td>9/9</td><td>9/9</td><td>8/9</td><td>8/9</td><td>9/9</td><td>9/8</td><td>8/8</td></tr><tr><td>P159</td><td><b>6/8</b></td><td>8/5</td><td>9/8</td><td>6/6</td><td>8/8</td><td>8/9</td><td>8/9</td><td>8/4</td><td>8/6</td></tr><tr><td>P160</td><td><b>6/9</b></td><td>6/4</td><td>8/8</td><td>8/8</td><td>8/8</td><td>8/9</td><td>8/9</td><td>8/5</td><td>8/7</td></tr><tr><td>P161</td><td><b>3/1</b></td><td>2/2</td><td>2/2</td><td>2/1</td><td>2/2</td><td>2/2</td><td>2/2</td><td>2/1</td><td>2/2</td></tr><tr><td>P163</td><td><b>6/6</b></td><td>8/4</td><td>8/6</td><td>6/5</td><td>6/5</td><td>8/6</td><td>8/8</td><td>8/4</td><td>8/5</td></tr><tr><td>P164</td><td><b>8/5</b></td><td>9/4</td><td>9/9</td><td>8/9</td><td>8/8</td><td>8/9</td><td>8/9</td><td>8/5</td><td>8/4</td></tr>
+</table>
+
+<h2>3. 指标明细（按维度展开）</h2>
+<table>
+<tr><th>模型</th><th>维度</th><th>Spearman</th><th>Pearson</th><th>ICC</th><th>QWK</th>
+<th>完全一致</th><th>±1</th><th>MAE</th><th>RMSE</th><th>解析成功率</th><th>最终失败数</th></tr>
+<tr><td>baseline(未微调)</td><td>信息量</td><td>0.738</td><td>0.756</td><td>0.756</td><td>0.756</td><td>0.250</td><td>0.542</td><td>1.542</td><td>1.990</td><td>1.000</td><td>0</td></tr><tr><td>baseline(未微调)</td><td>流畅度</td><td>0.659</td><td>0.675</td><td>0.645</td><td>0.563</td><td>0.125</td><td>0.375</td><td>2.208</td><td>2.700</td><td>1.000</td><td>0</td></tr><tr><td>微调 Round 1</td><td>信息量</td><td>0.890</td><td>0.847</td><td>0.840</td><td>0.804</td><td>0.167</td><td>0.542</td><td>1.583</td><td>1.958</td><td>1.000</td><td>0</td></tr><tr><td>微调 Round 1</td><td>流畅度</td><td>0.758</td><td>0.802</td><td>0.800</td><td>0.800</td><td>0.375</td><td>0.708</td><td>1.292</td><td>2.010</td><td>1.000</td><td>0</td></tr><tr><td>微调 Round 2</td><td>信息量</td><td>0.902</td><td>0.889</td><td>0.879</td><td>0.871</td><td>0.500</td><td>0.708</td><td>1.000</td><td>1.581</td><td>1.000</td><td>0</td></tr><tr><td>微调 Round 2</td><td>流畅度</td><td>0.785</td><td>0.800</td><td>0.792</td><td>0.792</td><td>0.292</td><td>0.667</td><td>1.458</td><td>2.131</td><td>1.000</td><td>0</td></tr><tr><td>微调 Round 3</td><td>信息量</td><td>0.906</td><td>0.881</td><td>0.879</td><td>0.873</td><td>0.417</td><td>0.583</td><td>1.083</td><td>1.500</td><td>1.000</td><td>0</td></tr><tr><td>微调 Round 3</td><td>流畅度</td><td>0.798</td><td>0.832</td><td>0.831</td><td>0.831</td><td>0.375</td><td>0.792</td><td>1.125</td><td>1.814</td><td>1.000</td><td>0</td></tr><tr><td>微调 Round 4</td><td>信息量</td><td>0.912</td><td>0.885</td><td>0.879</td><td>0.861</td><td>0.458</td><td>0.542</td><td>1.125</td><td>1.620</td><td>1.000</td><td>0</td></tr><tr><td>微调 Round 4</td><td>流畅度</td><td>0.831</td><td>0.836</td><td>0.828</td><td>0.822</td><td>0.417</td><td>0.750</td><td>1.250</td><td>1.979</td><td>1.000</td><td>0</td></tr><tr><td>微调 Round 5</td><td>信息量</td><td>0.933</td><td>0.904</td><td>0.899</td><td>0.880</td><td>0.375</td><td>0.542</td><td>1.125</td><td>1.486</td><td>1.000</td><td>0</td></tr><tr><td>微调 Round 5</td><td>流畅度</td><td>0.864</td><td>0.865</td><td>0.861</td><td>0.839</td><td>0.417</td><td>0.667</td><td>1.250</td><td>1.848</td><td>1.000</td><td>0</td></tr><tr><td>deepseek-v4-pro</td><td>信息量</td><td>0.830</td><td>0.838</td><td>0.838</td><td>0.826</td><td>0.250</td><td>0.583</td><td>1.333</td><td>1.732</td><td>1.000</td><td>0</td></tr><tr><td>deepseek-v4-pro</td><td>流畅度</td><td>0.780</td><td>0.752</td><td>0.701</td><td>0.650</td><td>0.333</td><td>0.583</td><td>1.625</td><td>2.282</td><td>1.000</td><td>0</td></tr><tr><td>GLM 5.1</td><td>信息量</td><td>0.829</td><td>0.833</td><td>0.833</td><td>0.831</td><td>0.417</td><td>0.500</td><td>1.208</td><td>1.671</td><td>1.000</td><td>0</td></tr><tr><td>GLM 5.1</td><td>流畅度</td><td>0.837</td><td>0.822</td><td>0.784</td><td>0.758</td><td>0.125</td><td>0.625</td><td>1.542</td><td>1.904</td><td>1.000</td><td>0</td></tr>
+</table>
+
+<h2>4. 微调超参数与迭代策略</h2>
+<p><b>迭代逻辑：</b>R1（基线 LoRA）→ R2（提 LR 2× 加速收敛）→ R3（提 rank 到 32 增容量，但 rank 翻倍后效果提升有限）→ R4（降 LR+grad_accum，精细调参，稳定提升）→ <b>R5（加 epochs 3→5，充分训练，达到最优）</b>。</p><p><b>共享参数：</b>batch_size=1, lora_target=all, lr_scheduler=cosine, warmup_ratio=0.1, fp16, gradient_checkpointing, seed=20260531。</p><table>
+<tr><th>轮次</th><th>LoRA Rank</th><th>Learning Rate</th><th>Epochs</th><th>Grad Accum</th><th>有效 Batch</th><th>Cutoff Len</th></tr>
+<tr><td>微调 Round 1</td><td>16</td><td>0.0001</td><td>3.0</td><td>8</td><td>8</td><td>8192</td></tr><tr><td>微调 Round 2</td><td>16</td><td>0.0002</td><td>3.0</td><td>8</td><td>8</td><td>8192</td></tr><tr><td>微调 Round 3</td><td>32</td><td>0.0001</td><td>3.0</td><td>8</td><td>8</td><td>8192</td></tr><tr><td>微调 Round 4</td><td>16</td><td>5e-05</td><td>3.0</td><td>4</td><td>4</td><td>8192</td></tr><tr><td>微调 Round 5</td><td>16</td><td>5e-05</td><td>5.0</td><td>4</td><td>4</td><td>8192</td></tr>
+</table>
+<h2>5. 成功判定</h2>
+<p><b>成功判定（SC-009）：</b>✅ 成功（最优轮次：微调 Round 5）</p><ul><li>首要：相关性较 baseline 改善 = True</li><li>次要：QWK 较 baseline 改善 = True</li></ul><pre>{
+  &quot;info_spearman&quot;: [
+    0.7383388076453719,
+    0.9333819791879516
+  ],
+  &quot;flue_spearman&quot;: [
+    0.6592149275681288,
+    0.8635034541008014
+  ],
+  &quot;info_qwk&quot;: [
+    0.7555746140651801,
+    0.8802710843373494
+  ],
+  &quot;flue_qwk&quot;: [
+    0.5630461922596754,
+    0.8385032003938946
+  ]
+}</pre>
+</body></html>

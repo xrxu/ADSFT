@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "inference-output.schema.json",
+  "title": "WAB Inference Result",
+  "description": "推理结果 jsonl 中的一行：测试集某 Case × 某路模型 × 某问型。",
+  "type": "object",
+  "required": ["case_id", "model_route", "qtype", "raw_output", "parse_ok", "retry_count", "unavailable"],
+  "additionalProperties": false,
+  "properties": {
+    "case_id": { "type": "string", "pattern": "^P[0-9]+$" },
+    "model_route": { "type": "string", "enum": ["finetuned", "baseline", "deepseek", "glm"] },
+    "round": { "type": ["integer", "null"], "minimum": 1, "maximum": 4 },
+    "qtype": { "type": "string", "enum": ["score", "reason"] },
+    "raw_output": { "type": "string" },
+    "info_pred": { "type": ["integer", "null"], "minimum": 0, "maximum": 10 },
+    "flue_pred": { "type": ["integer", "null"], "minimum": 0, "maximum": 10 },
+    "reason_text": { "type": ["string", "null"] },
+    "parse_ok": { "type": "boolean" },
+    "retry_count": { "type": "integer", "minimum": 0 },
+    "unavailable": { "type": "boolean" }
+  },
+  "allOf": [
+    {
+      "$comment": "score 且成功解析则两分非空且在域内",
+      "if": { "properties": { "qtype": { "const": "score" }, "parse_ok": { "const": true } } },
+      "then": { "required": ["info_pred", "flue_pred"], "properties": { "info_pred": { "type": "integer" }, "flue_pred": { "type": "integer" } } }
+    }
+  ],
+  "$comment": "parse_ok=false 的 score 记录表示重跑达上限仍失败；不得填默认分。unavailable=true 表示该路（通常 deepseek/glm 外部模型）不可用。"
+}

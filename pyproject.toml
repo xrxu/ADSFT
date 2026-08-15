@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aphasia"
+version = "0.1.0"
+description = "WAB 失语症评分 LORA 微调流水线"
+requires-python = ">=3.12"
+# 依赖以 conda env `llama_factory` 已安装版本为准，不在此固定/重装：
+# torch 2.7.1+cu126, transformers 4.52.4, peft 0.15.2, llamafactory 0.9.3,
+# swanlab 0.6.8, autoawq 0.2.9, openpyxl 3.1.5, pandas 2.3.0, scipy 1.15.3,
+# scikit-learn 1.7.0。运行命令请用：conda run -n llama_factory python -m aphasia.cli ...
+dependencies = []
+
+[project.scripts]
+aphasia = "aphasia.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
