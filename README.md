@@ -87,7 +87,7 @@ python -m pytest tests/ -v
 
 - **Primary**: Pearson/Spearman correlation (score vs. gold)
 - **Secondary**: Quadratic Weighted Kappa (QWK), exact agreement rate, ±1 tolerance, MAE, RMSE
-- **ICC**: Intraclass Correlation Coefficient (2,1) absolute agreement
+- **ICC**: Intraclass Correlation Coefficient (3,1) absolute agreement
 
 ### Data
 
@@ -182,7 +182,7 @@ python -m pytest tests/ -v
 
 - **首要指标**：Pearson/Spearman 相关系数（评分与金标准）
 - **次要指标**：二次加权 Kappa（QWK）、完全一致率、±1 容差、MAE、RMSE
-- **ICC**：组内相关系数 (2,1) 绝对一致性
+- **ICC**：组内相关系数 (3,1) 绝对一致性
 
 ### 数据集
 
