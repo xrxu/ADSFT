@@ -2,6 +2,7 @@
 
 > 基于 Qwen3-32B-AWQ 的 WAB 失语症评分 LORA 微调流水线
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [English](#english) | [中文](#chinese)
 
 ---
@@ -80,6 +81,7 @@ python -m pytest tests/ -v
 - **Environment**: Conda env `llama_factory` (Python 3.12)
 - **Base Model**: `Qwen3-32B-AWQ` (AWQ 4-bit quantized, at `/proj/models/Qwen/Qwen3-32B-AWQ`)
 - **Key Dependencies**: LLaMA-Factory 0.9.3, torch 2.7.1+cu126, transformers 4.52.4, peft 0.15.2, swanlab 0.6.8, autoawq 0.2.9
+- **Fine-tuned Adapter**: [xrxu/aphasia_adapter](https://huggingface.co/xrxu/aphasia_adapter) on Hugging Face
 
 ### Evaluation Metrics
 
@@ -174,6 +176,7 @@ python -m pytest tests/ -v
 - **环境**：Conda env `llama_factory`（Python 3.12，路径 `/home/xinxu/local/.conda/envs/llama_factory`）
 - **基座模型**：`Qwen3-32B-AWQ`（AWQ 4-bit 量化，路径 `/proj/models/Qwen/Qwen3-32B-AWQ`）
 - **主要依赖**：LLaMA-Factory 0.9.3、torch 2.7.1+cu126、transformers 4.52.4、peft 0.15.2、swanlab 0.6.8、autoawq 0.2.9
+- **微调适配器**：[xrxu/aphasia_adapter](https://huggingface.co/xrxu/aphasia_adapter)（Hugging Face）
 
 ### 评估指标
 
