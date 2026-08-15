@@ -18,7 +18,7 @@ This project fine-tunes **Qwen3-32B-AWQ** using **LORA** (via [LLaMA-Factory](ht
 ```text
 aphasiacld/
 ├── datasets/                    # Raw data (read-only)
-│   ├── conversation/            # 185 ASR dialogue transcripts (P001–P220)
+│   ├── conversation/            # 187 ASR dialogue transcripts (P001–P220)
 │   ├── gold/                    # WAB_summary_v0.80.xlsx — gold standard & prompts
 │   └── diag/                    # WAB reference doc
 ├── src/aphasia/                 # Pipeline source code
@@ -91,7 +91,7 @@ python -m pytest tests/ -v
 
 ### Data
 
-- 185 real aphasic patient dialogue transcripts (Chinese, ASR)
+- 187 real aphasic patient dialogue transcripts (Chinese, ASR)
 - Gold standard scores in `datasets/gold/WAB_summary_v0.80.xlsx` (5 sheets)
 - AI-generated synthetic dialogues (fakeasr) for data augmentation
 
@@ -112,7 +112,7 @@ python -m pytest tests/ -v
 ```text
 aphasiacld/
 ├── datasets/                    # 原始数据（只读）
-│   ├── conversation/            # 185 份真实对话语音转写（P001–P220）
+│   ├── conversation/            # 187 份真实对话语音转写（P001–P220）
 │   ├── gold/                    # WAB_summary_v0.80.xlsx — 金标准与 prompt 模板
 │   └── diag/                    # WAB 诊断量表参考文档
 ├── src/aphasia/                 # 流水线源代码
@@ -186,7 +186,7 @@ python -m pytest tests/ -v
 
 ### 数据集
 
-- 185 份真实失语症患者对话转录（中文，ASR 文本）
+- 187 份真实失语症患者对话转录（中文，ASR 文本）
 - 金标准评分在 `datasets/gold/WAB_summary_v0.80.xlsx`（含 5 个工作表）
 - AI 生成的合成对话（fakeasr）用于数据增强
 
